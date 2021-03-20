@@ -1,0 +1,23 @@
+{
+    "name": "naclnik/sea-battle-backend-aliciesy",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Daniil Dzevelyuk",
+            "email": "danycall19@gmail.com"
+        }
+    ],
+    "require": {
+      "ext-mbstring": "*",
+      "ext-json": "*",
+        "illuminate/database": "^8.33"
+    },
+    "description": "Backend for sea-battle. For development was used Aliciesy Framework",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Config\\": "config/",
+            "Core\\": "core/"
+        }
+    }
+}
