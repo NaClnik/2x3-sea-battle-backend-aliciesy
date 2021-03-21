@@ -4,7 +4,7 @@
 namespace Core\Base\Interfaces;
 
 
-interface IConfig
+interface IArrayConfig
 {
     public function getConfig(): array;
-} // IConfig.
+} // IArrayConfig.

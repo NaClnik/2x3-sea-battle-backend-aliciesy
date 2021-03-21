@@ -2,9 +2,9 @@
 
 namespace Config;
 
-use Core\Base\Interfaces\IConfig;
+use Core\Base\Interfaces\IArrayConfig;
 
-class ConnectionConfig implements IConfig
+class ConnectionArrayConfig implements IArrayConfig
 {
     public function getConfig(): array
     {
@@ -19,4 +19,4 @@ class ConnectionConfig implements IConfig
             'prefix'    => '',
         ]; // return.
     } // getConfig.
-} // ConnectionConfig.
+} // ConnectionArrayConfig.

@@ -5,24 +5,43 @@ namespace Core\Bootstrap;
 
 
 use App\Exceptions\ExceptionsHandler;
-use App\Models\User;
 use App\Routes\ApiRouteDefiner;
 use Core\Collections\HeadersCollection;
 use Core\Defaults\DefaultUriMatchValidator;
 use Core\Exceptions\RouteNotFoundException;
 use Core\External\Eloquent;
+use Core\Routing\Router;
 use Core\Routing\RouterBuilder;
 use Exception;
 
 class WebApplication
 {
+    // Поля класса.
+    private Router $router;
+
+    #region Аксессоры и мутаторы класса
+    // Аксессоры и мутаторы класса.
+    /**
+     * @return Router
+     */
+    public function getRouter(): Router
+    {
+        return $this->router;
+    }
+
+    /**
+     * @param Router $router
+     */
+    public function setRouter(Router $router): void
+    {
+        $this->router = $router;
+    }
+    #endregion
+
     // TODO: Декомпозировать метод.
     // Методы класса.
     public function run(): void{
-        $eloquent = new Eloquent();
-
-
-        $eloquent->boot();
+        WebApplicationLoader::make()->boot();
 
         $router = (new RouterBuilder())
             ->setRoutesCollection(new ApiRouteDefiner())

@@ -17,8 +17,6 @@ class TestController extends BaseController
 
         $player = $players[0];
 
-
-
-        return JsonResponse::make($player->gameTable);
+        return JsonResponse::make($player->player);
     } // index.
 } // TestController.
