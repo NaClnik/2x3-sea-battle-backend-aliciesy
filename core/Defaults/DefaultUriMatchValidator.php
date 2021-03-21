@@ -37,15 +37,16 @@ class DefaultUriMatchValidator implements IUriMatchValidator
         for($i = 0; $i < $totalCountSegments; $i++){
             // Получение текущих сегментов и приведение их к нижнему регистру
             // для сравнивания.
-            $currentRequestRouteSegment = strtolower($requestRouteSegments[$i]);
-            $currentDefinedRouteSegment = strtolower($definedRouteSegments[$i]);
+            $currentRequestRouteSegment = mb_strtolower($requestRouteSegments[$i]);
+            $currentDefinedRouteSegment = mb_strtolower($definedRouteSegments[$i]);
 
             // Если сегменты не совпадают и $currentDefinedRouteSegment
             // не соответствует строке {text}, то ставим флаг в false.
-            if($currentRequestRouteSegment != $currentDefinedRouteSegment
-            || !preg_match('/{[^\/]+}/', $currentDefinedRouteSegment)){
-                $match = false;
-            } // if.
+            if(!($currentRequestRouteSegment == $currentDefinedRouteSegment
+            || preg_match('/{[^\/]+}/', $currentDefinedRouteSegment))) {
+                $isMatch = false;
+                break;
+            }
         } // for.
 
         return $isMatch;

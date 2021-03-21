@@ -4,6 +4,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Player;
 use App\Services\Test\TestService;
 use Core\Base\Abstracts\BaseController;
 use Core\Http\Responses\JsonResponse;
@@ -12,6 +13,12 @@ class TestController extends BaseController
 {
     // Write actions here.
     public function index(): JsonResponse {
-        return JsonResponse::make(['message' => 'example']);
+        $players = Player::all();
+
+        $player = $players[0];
+
+
+
+        return JsonResponse::make($player->gameTable);
     } // index.
 } // TestController.

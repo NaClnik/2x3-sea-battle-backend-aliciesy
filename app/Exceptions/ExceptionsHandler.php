@@ -6,6 +6,7 @@ namespace App\Exceptions;
 
 use Core\Base\Abstracts\CoreExceptionsHandler;
 use Core\Exceptions\RouteNotFoundException;
+use Exception;
 
 class ExceptionsHandler extends CoreExceptionsHandler
 {

@@ -29,6 +29,11 @@ abstract class CoreExceptionsHandler
     {
         $callback = $this->exceptionHandlersCollection->getValueByKey($className);
 
+        // TODO: Переделать.
+        if(!$callback){
+            echo 'Иключение не зарегестрировано: '.$className.'. Сообщение: '.$exception->getMessage();
+        }
+
         $callback->__invoke($exception);
     } // handle.
 

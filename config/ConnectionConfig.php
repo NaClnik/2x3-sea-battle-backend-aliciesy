@@ -11,7 +11,7 @@ class ConnectionConfig implements IConfig
         return [
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => 'test',
+            'database'  => 'sea_battle_backend_aliciesy',
             'username'  => 'root',
             'password'  => 'root',
             'charset'   => 'utf8',

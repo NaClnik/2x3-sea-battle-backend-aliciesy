@@ -6,11 +6,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cell extends Model
+class FirstPlayer extends Model
 {
     protected $fillable = [
-        'coord_x',
-        'coord_y',
-        'playing_field_id'
+        'player_id'
     ]; // fillable.
-} // Cell.
+} // FirstPlayer.
