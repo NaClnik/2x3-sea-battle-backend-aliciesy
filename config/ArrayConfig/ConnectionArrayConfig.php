@@ -1,6 +1,6 @@
 <?php
 
-namespace Config;
+namespace Config\ArrayConfig;
 
 use Core\Base\Interfaces\IArrayConfig;
 

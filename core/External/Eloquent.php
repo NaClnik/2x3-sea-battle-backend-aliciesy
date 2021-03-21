@@ -2,7 +2,7 @@
 
 namespace Core\External;
 
-use Config\ConnectionArrayConfig;
+use Config\ArrayConfig\ConnectionArrayConfig;
 use Core\Base\Interfaces\IBootable;
 use Illuminate\Database\Capsule\Manager as Capsule;
 
