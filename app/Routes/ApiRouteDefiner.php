@@ -4,7 +4,6 @@
 namespace App\Routes;
 
 
-use App\Http\Controllers\TestController;
 use Core\Base\Abstracts\RouteDefiner;
 use Core\Routing\RoutesCollection;
 
@@ -13,7 +12,6 @@ class ApiRouteDefiner extends RouteDefiner
 {
     public function getRoutes(): RoutesCollection
     {
-        $this->routesCollection->get('/test/verify', TestController::class, 'index');
 
         return $this->routesCollection;
     } // getRoutes.
