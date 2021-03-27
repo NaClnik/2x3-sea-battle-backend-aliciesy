@@ -10,8 +10,7 @@
     "require": {
       "ext-mbstring": "*",
       "ext-json": "*",
-        "illuminate/database": "^8.33",
-        "workerman/workerman": "^4.0"
+        "illuminate/database": "^8.33"
     },
     "description": "Backend for sea-battle. For development was used Aliciesy Framework",
     "autoload": {

@@ -6,6 +6,7 @@ namespace App\Services\Players;
 
 use App\Models\Player;
 use App\Services\Players\Repositories\PlayersRepository;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
 class PlayersService
@@ -25,7 +26,7 @@ class PlayersService
         return $this->playersRepository->getAll();
     } // getAllPlayers.
 
-    public function createPlayerFromArray(array $data)
+    public function createPlayerFromArray(array $data): Model
     {
         return $this->playersRepository->createFromArray($data);
     } // createPlayerFromArray.

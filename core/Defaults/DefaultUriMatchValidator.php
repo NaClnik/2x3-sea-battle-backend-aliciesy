@@ -15,8 +15,15 @@ class DefaultUriMatchValidator implements IUriMatchValidator
         // Создаём экземпляр парсера.
         $routeParser = new RouteParser();
 
+        $requestRouteString = $requestRoute->getRoute();
+
+        $queryParamsPosition = strripos($requestRoute->getRoute(), '?');
+        if($queryParamsPosition){
+            $requestRouteString = mb_substr($requestRoute->getRoute(), 0, $queryParamsPosition);
+        } // if.
+
         // Парсим роуты.
-        $requestRouteSegments = $routeParser->parse($requestRoute->getRoute());
+        $requestRouteSegments = $routeParser->parse($requestRouteString);
         $definedRouteSegments = $routeParser->parse($definedRoute->getRoute());
 
         // Если количество сегментов не совпадает

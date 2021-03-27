@@ -28,4 +28,4 @@ class GameTable extends Model
     {
         return $this->hasOne(PlayingField::class);
     } // playingField.
-} // GameTable.
+} // GameTables.

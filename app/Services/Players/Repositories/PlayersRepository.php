@@ -10,13 +10,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class PlayersRepository
 {
-    // TODO: Реализовать CRUD операции.
     public function getAll(): Collection
     {
         return Player::all();
     } // getAll.
 
-    public function createFromArray(array $data)
+    public function createFromArray(array $data): Model
     {
         return Player::query()->create($data);
     } // createFromArray.
