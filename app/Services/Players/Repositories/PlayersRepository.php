@@ -15,7 +15,12 @@ class PlayersRepository
         return Player::all();
     } // getAll.
 
-    public function createFromArray(array $data): Model
+    public function getById(int $id)
+    {
+        return Player::query()->find($id);
+    } // getById.
+
+    public function createFromArray(array $data): Player
     {
         return Player::query()->create($data);
     } // createFromArray.

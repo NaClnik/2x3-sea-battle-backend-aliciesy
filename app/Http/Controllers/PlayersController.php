@@ -28,12 +28,16 @@ class PlayersController extends BaseController
 
     public function post()
     {
+        $this->playersService->createPlayerFromArray(Request::make()->getData());
+        return JsonResponse::make([], [], 201);
     } // post.
 
-    public function put()
+    public function put($playerId)
     {
-
-    }
+        $player = $this->playersService->getPlayerById($playerId);
+        $this->playersService->updatePlayer($player, Request::make()->getData());
+        return JsonResponse::make([]);
+    } // put.
 
     public function delete()
     {
