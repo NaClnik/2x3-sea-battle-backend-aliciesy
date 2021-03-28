@@ -15,7 +15,7 @@ class SecondPlayersRepository
         return SecondPlayer::all();
     } // getAll.
 
-    public function createFromArray(array $data): Model
+    public function createFromArray(array $data): SecondPlayer
     {
         return SecondPlayer::query()->create($data);
     } // createFromArray.

@@ -15,6 +15,8 @@ class ApiRouteDefiner extends RouteDefiner
     {
         $this->routesCollection->get('players', PlayersController::class, 'get');
         $this->routesCollection->post('players', PlayersController::class, 'post');
+        $this->routesCollection->put('players/{id}', PlayersController::class, 'put');
+        $this->routesCollection->delete('players/{id}', PlayersController::class, 'delete');
 
         return $this->routesCollection;
     } // getRoutes.

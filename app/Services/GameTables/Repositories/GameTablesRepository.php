@@ -15,7 +15,7 @@ class GameTablesRepository
         return GameTable::all();
     } // getAll.
 
-    public function createFromArray(array $data): Model
+    public function createFromArray(array $data): GameTable
     {
         return GameTable::query()->create($data);
     } // createFromArray.

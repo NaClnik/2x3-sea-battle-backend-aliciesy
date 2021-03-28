@@ -15,7 +15,7 @@ class PlayingFieldsRepository
         return PlayingField::all();
     } // getAll.
 
-    public function createFromArray(array $data): Model
+    public function createFromArray(array $data): PlayingField
     {
         return PlayingField::query()->create($data);
     } // createFromArray.

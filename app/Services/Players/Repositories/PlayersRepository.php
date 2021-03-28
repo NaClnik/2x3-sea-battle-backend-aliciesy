@@ -15,7 +15,7 @@ class PlayersRepository
         return Player::all();
     } // getAll.
 
-    public function getById(int $id)
+    public function getById(int $id): Player
     {
         return Player::query()->find($id);
     } // getById.

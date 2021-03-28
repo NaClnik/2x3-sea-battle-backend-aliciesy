@@ -26,7 +26,7 @@ class GameTablesService
         return $this->gameTablesRepository->getAll();
     } // getAllGameTables.
 
-    public function createGameTableFromArray(array $data): Model
+    public function createGameTableFromArray(array $data): GameTable
     {
         return $this->gameTablesRepository->createFromArray($data);
     } // createGameTableFromArray.

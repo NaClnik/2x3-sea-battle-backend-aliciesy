@@ -26,7 +26,7 @@ class SecondPlayersService
         return $this->secondPlayersRepository->getAll();
     } // getAllSecondPlayers.
 
-    public function createSecondPlayerFromArray(array $data): Model
+    public function createSecondPlayerFromArray(array $data): SecondPlayer
     {
         return $this->secondPlayersRepository->createFromArray($data);
     } // createSecondPlayerFromArray.

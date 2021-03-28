@@ -15,7 +15,7 @@ class FirstPlayersRepository
         return FirstPlayer::all();
     } // getAll.
 
-    public function createFromArray(array $data): Model
+    public function createFromArray(array $data): FirstPlayer
     {
         return FirstPlayer::query()->create($data);
     } // createFromArray.

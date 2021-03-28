@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Services\Players\PlayersService;
 use Core\Base\Abstracts\BaseController;
+use Core\Http\Requests\PutRequest;
 use Core\Http\Requests\Request;
 use Core\Http\Responses\JsonResponse;
 
@@ -29,18 +30,20 @@ class PlayersController extends BaseController
     public function post()
     {
         $this->playersService->createPlayerFromArray(Request::make()->getData());
-        return JsonResponse::make([], [], 201);
+        return JsonResponse::make(Request::make()->getData(), [], 201);
     } // post.
 
     public function put($playerId)
     {
         $player = $this->playersService->getPlayerById($playerId);
-        $this->playersService->updatePlayer($player, Request::make()->getData());
+        $this->playersService->updatePlayer($player, PutRequest::make()->getData());
         return JsonResponse::make([]);
     } // put.
 
-    public function delete()
+    public function delete($playerId)
     {
-
-    }
+        $player = $this->playersService->getPlayerById($playerId);
+        $this->playersService->deletePlayer($player);
+        return JsonResponse::make([], [], 204);
+    } // delete.
 } // PlayersController.

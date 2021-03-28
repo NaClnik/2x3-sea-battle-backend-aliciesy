@@ -26,7 +26,7 @@ class PlayingFieldsService
         return $this->playingFieldsRepository->getAll();
     } // getAllPlayingFields.
 
-    public function createPlayingFieldFromArray(array $data): Model
+    public function createPlayingFieldFromArray(array $data): PlayingField
     {
         return $this->playingFieldsRepository->createFromArray($data);
     } // createPlayingFieldFromArray.

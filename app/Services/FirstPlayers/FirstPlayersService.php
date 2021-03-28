@@ -26,7 +26,7 @@ class FirstPlayersService
         return $this->firstPlayersRepository->getAll();
     } // getAllFirstPlayers.
 
-    public function createFirstPlayerFromArray(array $data): Model
+    public function createFirstPlayerFromArray(array $data): FirstPlayer
     {
         return $this->firstPlayersRepository->createFromArray($data);
     } // createFirstPlayerFromArray.

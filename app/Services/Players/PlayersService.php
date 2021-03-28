@@ -26,12 +26,12 @@ class PlayersService
         return $this->playersRepository->getAll();
     } // getAllPlayers.
 
-    public function getPlayerById($id)
+    public function getPlayerById($id): Player
     {
         return $this->playersRepository->getById($id);
     } // getPlayerById.
 
-    public function createPlayerFromArray(array $data)
+    public function createPlayerFromArray(array $data): Player
     {
         return $this->playersRepository->createFromArray($data);
     } // createPlayerFromArray.
