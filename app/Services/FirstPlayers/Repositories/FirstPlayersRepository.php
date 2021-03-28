@@ -29,4 +29,9 @@ class FirstPlayersRepository
     {
         return $firstPlayer->delete();
     } // delete.
+
+    public function getById(int $id): FirstPlayer
+    {
+        return FirstPlayer::query()->findOrFail($id);
+    } // getById.
 } // FirstPlayersRepository.

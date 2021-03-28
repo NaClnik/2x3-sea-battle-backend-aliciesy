@@ -29,4 +29,9 @@ class GameTablesRepository
     {
         return $gameTable->delete();
     } // delete.
+
+    public function getById(int $id): GameTable
+    {
+        return GameTable::query()->findOrFail($id);
+    } // getById.
 } // GameTablesRepository.

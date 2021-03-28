@@ -40,4 +40,9 @@ class SecondPlayersService
     {
         return $this->secondPlayersRepository->delete($secondPlayer);
     } // deleteSecondPlayer.
+
+    public function getSecondPlayerById(int $id)
+    {
+        return $this->secondPlayersRepository->getById($id);
+    } // getSecondPlayerById.
 } // SecondPlayersService.

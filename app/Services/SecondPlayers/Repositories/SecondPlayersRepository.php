@@ -29,4 +29,9 @@ class SecondPlayersRepository
     {
         return $secondPlayer->delete();
     } // delete.
+
+    public function getById(int $id)
+    {
+        return SecondPlayer::query()->findOrFail($id);
+    } // getById.
 } // SecondPlayersRepository.

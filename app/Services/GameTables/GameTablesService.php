@@ -40,4 +40,9 @@ class GameTablesService
     {
         return $this->gameTablesRepository->delete($gameTable);
     } // deleteGameTable.
+
+    public function getGameTableById(int $id): GameTable
+    {
+        return $this->gameTablesRepository->getById($id);
+    } // getGameTableById.
 } // GameTablesService.

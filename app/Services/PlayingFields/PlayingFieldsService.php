@@ -40,4 +40,9 @@ class PlayingFieldsService
     {
         return $this->playingFieldsRepository->delete($playingField);
     } // deletePlayingField.
+
+    public function getPlayingFieldById(int $id)
+    {
+        return $this->playingFieldsRepository->getById($id);
+    } // getPlayingFieldById.
 } // PlayingFieldsService.

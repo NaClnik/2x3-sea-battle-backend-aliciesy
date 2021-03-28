@@ -40,4 +40,9 @@ class FirstPlayersService
     {
         return $this->firstPlayersRepository->delete($firstPlayer);
     } // deleteFirstPlayer.
+
+    public function getFirstPlayerById(int $id)
+    {
+        return $this->firstPlayersRepository->getById($id);
+    } // getFirstPlayerById.
 } // FirstPlayersService.

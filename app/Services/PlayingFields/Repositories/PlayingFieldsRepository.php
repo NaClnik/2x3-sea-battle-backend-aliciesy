@@ -29,4 +29,9 @@ class PlayingFieldsRepository
     {
         return $playingField->delete();
     } // delete.
+
+    public function getById(int $id)
+    {
+        return PlayingField::query()->findOrFail($id);
+    } // getById.
 } // PlayingFieldsRepository.
